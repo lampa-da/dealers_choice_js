@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
+//a advantage of the html template tag is moving the html to another file. I would consider moving the html to another file to make the route code a lot cleaner
 const html = require("html-template-tag")
 const profileBank = require("./profileBank")
 const path = require("path")
@@ -44,6 +45,9 @@ const html =`
 res.send(html);
 res.end()
 });
+
+// In my opinion, it's better to leave the 'id' string out of your path. /id:id instead of just /:id means that if you do something with the number in the url later
+//you would have to filter out the 'id' part. And we use the number after a '/' a lot later
 
 app.get( '/cheracters/id:id', (req, res) => {
   const id = req.params.id;
@@ -102,7 +106,13 @@ app.get( '/cheracters/id:id', (req, res) => {
   }
 });
 
-
+//you want to make sure your error handeling endware can take in an error parameter show helpful information. Here is the line that I use in all my projects:
+// app.use((err, req, res, next) => {
+//  console.error(err);
+//  console.error(err.stack)
+//  res.status(err.status || 500).send(err.message || 'Internal Server Error')
+// })
+//console.error is basically the same as log. error.stack shows you what functions were called, and in what order so you can trace why the error happened
 app.get('*', (req, res) => res.send('<h1>Page Not found</h1>'));
 
 const PORT = 1340;
