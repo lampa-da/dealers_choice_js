@@ -1,0 +1,165 @@
+
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.front-page-profile {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:inherit;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.new-item {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction:column;
+  height: 700px;
+  min-width: 280px;
+  width: calc(100%/3 - 1.5rem);
+  position: relative;
+  /* border: solid black 1px; */
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.headline{
+  font-weight: bold;
+
+}
+
+.child{
+  display: inline-block;
+}
+
+.main-page-img > img{
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.main-page-img > img:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+}
+
+.info{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction:column;
+  height: 700px;
+  min-width: 280px;
+  width: calc(100% - 300px);
+  position: relative;
+  /* border: solid black 1px; */
+  /* justify-content: space-around; */
+  align-items: right;
+}
+
+.main{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  
+  padding: 1.5rem;
+  
+}
+.profile-page {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-bottom: 2.5rem
+
+}
+.profile-name {
+  width: 100%;
+  padding-left: 1rem ;
+
+  background-color: RGB(255,217,15);
+}
+.img-profile{
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+h4 {
+  margin-top: 0%;
+  font-weight: normal;
+  padding-left: 1rem ;
+  text-decoration-style: none;
+}
+
+
+
+button {
+  width: 100%;
+  height: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight:bold;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  touch-action: manipulation;
+  
+}
+
+
+
+button:after {
+  content: "";
+  background-color: RGB(255,217,15);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.back-btn{
+  position:relative;
+  bottom: 0
+}
+.more-info-btn{
+  position:absolute;
+  bottom: 0
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative
+}
+
+footer{
+  background-color: RGB(255,217,15);
+  position:relative;
+  bottom:0;
+  width:100%;
+  margin-top: 3rem;
+  min-height: 3rem;
+  text-align: center;
+}
+
+footer > a{
+  text-decoration: none;
+}
+
+
+
+
+
