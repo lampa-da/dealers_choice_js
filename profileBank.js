@@ -15,6 +15,4 @@ const find = (id) => {
   return {...post}; 
 }
 
-
-
 module.exports = { list: list, find: find}; 
